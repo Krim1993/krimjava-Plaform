@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>edu.njw</groupId>
+    <artifactId>krimjava</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>krimjava</name>
+    <description>佳必过-聚合服务</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>krimjava-content</module>
+<!--        <module>passjava-member</module>-->
+<!--        <module>passjava-question</module>-->
+<!--        <module>passjava-study</module>-->
+<!--        <module>passjava-channel</module>-->
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>1.8</java.version>
+        <springboot.version>2.1.6.RELEASE</springboot.version>
+        <springcloud.version>Greenwich.RELEASE</springcloud.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <!--springboot相关-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--springcloud相关-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${springcloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
